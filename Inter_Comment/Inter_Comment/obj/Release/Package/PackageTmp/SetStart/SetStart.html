@@ -1,0 +1,189 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="renderer" content="webkit|ie-comp|ie-stand" /> 
+    <title>启动项设置</title>
+    <link rel="stylesheet" href="css/style.default.css" type="text/css" />
+    <script type="text/javascript" src="js/plugins/jquery-1.7.min.js"></script>
+    <script src="../Scripts/jquery-1.7.1.js"></script>
+    <script type="text/javascript" src="js/plugins/jquery-ui-1.8.16.custom.min.js"></script>
+    <script type="text/javascript" src="js/plugins/jquery.cookie.js"></script>
+    <script type="text/javascript" src="js/plugins/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="js/plugins/jquery.uniform.min.js"></script>
+    <script type="text/javascript" src="js/custom/general.js"></script>
+    <script type="text/javascript" src="js/custom/tables.js"></script>
+    
+    <script src="js/SetStart_JS.js"></script>
+    <!--[if IE 9]>
+    <link rel="stylesheet" media="screen" href="css/style.ie9.css"/>
+<![endif]-->
+    <!--[if IE 8]>
+    <link rel="stylesheet" media="screen" href="css/style.ie8.css"/>
+<![endif]-->
+    <!--[if lt IE 9]>
+	<script src="js/plugins/css3-mediaqueries.js"></script>
+<![endif]-->
+
+    <script type="text/javascript">
+        $(function () {
+            if (sessionStorage["role"] != '高级管理员') {
+                window.location.href = "../IC2/Login/IC2_Login/login.html";
+
+            }
+        })
+    </script>
+</head>
+
+<body class="withvernav">
+    <div class="bodywrapper">
+        <div class="topheader">
+            <div class="left">
+                <h1 class="logo"></h1>
+                <span class="slogan" style="font-size: 30px;">后台管理界面</span>
+                <br clear="all" />
+            </div>
+            <!--left-->
+
+            <div class="right">
+                <!--<div class="notification">
+                <a class="count" href="notifications.html"><span>9</span></a>
+        	</div>
+			-->
+
+
+
+
+            </div>
+            <!--userdata-->
+        </div>
+        <!--userinfodrop-->
+    </div>
+    <!--right-->
+    </div><!--topheader-->
+
+
+
+
+    <div class="vernav2 iconmenu">
+
+        <a class="togglemenu"></a>
+        <br />
+        <br />
+    </div>
+    <!--leftmenu-->
+
+    <div class="centercontent tables">
+
+        <div class="pageheader notab">
+            <h1 class="pagetitle">设置启动项</h1>
+            <span class="pagedesc">请在此设置本次考核内容</span>
+
+        </div>
+        <!--pageheader-->
+
+        <div id="contentwrapper" class="contentwrapper">
+
+            
+
+            
+
+            
+            <div class="contenttitle2">
+                <h3>设置启动项目</h3>
+            </div>
+            <!--contenttitle-->
+            <table cellpadding="0" cellspacing="0" border="0" class="stdtable stdtablecb">
+                <colgroup>
+                    <col class="con0" />
+                    <col class="con1" />
+                    <col class="con0" />
+                    <col class="con1" />
+                    <col class="con0" />
+                    <col class="con1" />
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th class="head0" style="width: 150px;">请选择启动项目标题</th>
+                        <th class="head1" colspan="4"><select id="start_select" style="width:100%;"></select></th>
+                        <th class="head0"><input type="button" id="set_btn" onclick="loadsetstart()" value="确定"/></th>
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <th class="head0" colspan="6" style="text-align:center;">
+                            <input type="button" value="确定设为启动项" style="width: 200px;" id="start_btn" onclick="setStart()"/></th>
+                    </tr>
+                </tfoot>
+                <tbody>
+                    <tr>
+                        <th class="head0" style="text-align:center;">项目名称</th>
+                        <th class="head1" colspan="3" id="set_first"></th>
+                        <th class="head0" style="text-align:right; width: 130px;">最大分值</th>
+                        <th class="head1" id="set_first_value" ></th>
+                    </tr>
+                    <tr>
+                        <th class="head0" style="text-align:center;">项目名称</th>
+                        <th class="head1" colspan="3" id="set_second"></th>
+                        <th class="head0" style="text-align:right;width: 130px;">最大分值</th>
+                        <th class="head1" id="set_second_value"></th>
+                    </tr>
+                    <tr>
+                        <th class="head0" style="text-align:center;">项目名称</th>
+                        <th class="head1" colspan="3" id="set_third"></th>
+                        <th class="head0" style="text-align:right;width: 130px;">最大分值</th>
+                        <th class="head1" id="set_third_value"></th>
+                    </tr>
+                    <tr>
+                        <th class="head0" style="text-align:center;">项目名称</th>
+                        <th class="head1" colspan="3" id="set_forth"></th>
+                        <th class="head0" style="text-align:right;width: 130px;">最大分值</th>
+                        <th class="head1" id="set_forth_value"></th>
+                    </tr>
+                    <tr>
+                        <th class="head0" style="text-align:center;">项目名称</th>
+                        <th class="head1" colspan="3" id="set_fifth"></th>
+                        <th class="head0" style="text-align:right;width: 130px;">最大分值</th>
+                        <th class="head1" id="set_fifth_value"></th>
+                    </tr>
+                </tbody>
+            </table>
+
+            <br clear="all" />
+
+            <br />
+            <br />
+
+            
+            <!--contenttitle-->
+
+
+
+            <br />
+            <br />
+
+
+
+            <!--</div>-->
+            <!--contentwrapper-->
+
+        </div>
+        <!-- centercontent -->
+
+
+    </div>
+    <!--bodywrapper-->
+    <script type="text/javascript">
+        $(function () {
+            //if (sessionStorage["identify"] == "普通管理员" || sessionStorage["identify"] == "高级管理员") {
+            //    loaditems();
+            //}
+            //else {
+            //    window.location.href = "../../IC2/Login/IC2_Login/login.html";
+            //}
+            loaditems();
+        })
+    </script>
+</body>
+</html>

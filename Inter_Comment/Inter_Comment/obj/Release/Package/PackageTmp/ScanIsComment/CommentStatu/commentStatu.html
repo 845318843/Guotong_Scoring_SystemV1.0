@@ -1,0 +1,117 @@
+<!DOCTYPE>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>查看员工评分状态</title>
+     <meta name="renderer" content="webkit|ie-comp|ie-stand"/> 
+    <script src="scriptaculous/lib/prototype.js" type="text/javascript"></script>
+    <script src="scriptaculous/src/effects.js" type="text/javascript"></script>
+    <script type="text/javascript" src="validation.js"></script>
+    <script src="JS/Statu_JS.js"></script>
+    <script src="../../Scripts/jquery-1.7.1.js"></script>
+    
+
+    <script type="text/javascript">
+
+        $(function () {
+            $("#table_test").css("display", "none");
+            $("#tijiao").css("display", "none");
+            if (sessionStorage["role"] == "高级管理员") {
+                $("#table_test").css("display", "block");
+                $("#tijiao").css("display", "block");
+                loadthemes();
+                loadyears();
+            }
+            else {
+                window.location.href = "../../IC2/Login/IC2_Login/login.html";
+                
+            }
+        })
+
+function setActiveStyleSheet(title) {
+var i, a, main;
+for(i=0; (a = document.getElementsByTagName("link")[i]); i++) {
+if(a.getAttribute("rel").indexOf("style") != -1 && a.getAttribute("title")) {
+a.disabled = true;
+if(a.getAttribute("title") == title) a.disabled = false;
+}
+}
+}
+
+
+    </script>
+<link title="style1" rel="stylesheet" href="style.css" type="text/css" />
+<link title="style2" rel="alternate stylesheet" href="style2.css" type="text/css" />
+<link title="style3" rel="alternate stylesheet" href="style3.css" type="text/css" />
+    <style>
+        td {
+        text-align:center;
+        border: 2px solid #808080;
+        padding: 0px;
+        overflow:hidden;
+        height: 35px;
+        }
+        th {
+        color:#0094ff;
+        border: 2px solid #808080;
+        }
+    </style>
+</head>
+<body>
+    <script type="text/javascript">
+        
+    </script>
+    <div class="style_changer">
+    	<div class="style_changer_text">主题：</div>
+        <input type="submit" value="1" onclick="setActiveStyleSheet('style1');" />
+        <input type="submit" value="2" onclick="setActiveStyleSheet('style2');" />
+        <input type="submit" value="3" onclick="setActiveStyleSheet('style3');" />
+    </div>
+
+    <div id="titles" style="margin:50px 100px;height:50px; text-align:center;line-height:50px;">
+        <label style="color:blue;font-size:30px;text-align:center;">查看员工是否已经评分</label>
+        
+    </div>
+	<div class="form_content">
+   <div><span>请选择考核的标题以查看相应记录：</span><select style="width: 300px;" id="themes"></select>请选择年份:<select id="years"></select>请选择月份:<select id="months"><option value="01">1月</option><option value="02">2月</option><option value="03">3月</option><option value="04">4月</option><option value="05">5月</option><option value="06">6月</option><option value="07">7月</option><option value="08">8月</option><option value="09">9月</option><option value="10">10月</option><option value="11">11月</option><option value="12">12月</option></select>&nbsp;&nbsp;&nbsp;&nbsp;<input type="button" value="确定" onclick="loadstatus()";/></div>
+        <form id="test" action="#" style="width: 900px;">
+            <table id="table_test">
+                <!--<tr>
+                    <th style="width:400px;text-align:center">姓名</th>
+                    <th style="width:400px;text-align:center">评分状态</th>
+                    
+                </tr>
+                <tr>
+                    <td>张三</td>
+                    <td>已评分</td>
+                </tr>-->
+                
+                
+                
+            </table>
+        </form>
+        
+    </div>
+    
+    <script type="text/javascript">
+       
+
+
+        function formCallback(result, form) {
+            window.status = "valiation callback for form '" + form.id + "': result = " + result;
+        }
+        
+        var valid = new Validation('test', {immediate : true, onFormValidate : formCallback});
+        Validation.addAllThese([
+            ['validate-password', '> 6 characters', {
+                minLength : 7,
+                notOneOf : ['password','PASSWORD','1234567','0123456'],
+                notEqualToField : 'field1'
+            }],
+            ['validate-password-confirm', 'please try again.', {
+                equalToField : 'field8'
+            }]
+        ]);
+    </script>
+
+</body>
+</html>

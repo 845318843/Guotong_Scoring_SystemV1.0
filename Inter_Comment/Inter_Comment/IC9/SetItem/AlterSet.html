@@ -1,0 +1,334 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>启动项设置</title>
+    <link rel="stylesheet" href="css/style.default.css" type="text/css" />
+    <script type="text/javascript" src="js/plugins/jquery-1.7.min.js"></script>
+    <script type="text/javascript" src="js/plugins/jquery-ui-1.8.16.custom.min.js"></script>
+    <script type="text/javascript" src="js/plugins/jquery.cookie.js"></script>
+    <script type="text/javascript" src="js/plugins/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="js/plugins/jquery.uniform.min.js"></script>
+    <script type="text/javascript" src="js/custom/general.js"></script>
+    <script type="text/javascript" src="js/custom/tables.js"></script>
+    <script src="../../Scripts/jquery-1.7.1.js"></script>
+    <script src="js/AlterJS.js"></script>
+    <!--[if IE 9]>
+    <link rel="stylesheet" media="screen" href="css/style.ie9.css"/>
+<![endif]-->
+    <!--[if IE 8]>
+    <link rel="stylesheet" media="screen" href="css/style.ie8.css"/>
+<![endif]-->
+    <!--[if lt IE 9]>
+	<script src="js/plugins/css3-mediaqueries.js"></script>
+<![endif]-->
+</head>
+
+<body class="withvernav">
+    <div class="bodywrapper">
+        <div class="topheader">
+            <div class="left">
+                <h1 class="logo"></h1>
+                <span class="slogan" style="font-size: 30px;">后台管理系统</span>
+
+
+
+                <br clear="all" />
+
+            </div>
+            <!--left-->
+
+            <div class="right">
+                <!--<div class="notification">
+                <a class="count" href="notifications.html"><span>9</span></a>
+        	</div>
+			-->
+
+
+
+
+            </div>
+            <!--userdata-->
+        </div>
+        <!--userinfodrop-->
+    </div>
+    <!--right-->
+    </div><!--topheader-->
+
+
+
+
+    <div class="vernav2 iconmenu">
+
+        <a class="togglemenu"></a>
+        <br />
+        <br />
+    </div>
+    <!--leftmenu-->
+
+    <div class="centercontent tables">
+
+        <div class="pageheader notab">
+            <h1 class="pagetitle">设置</h1>
+            <span class="pagedesc">请在此设置有关考核内容</span>
+
+        </div>
+        <!--pageheader-->
+
+        <div id="contentwrapper" class="contentwrapper">
+
+            <div class="contenttitle2">
+                <h3>添加考核项目</h3>
+            </div>
+            <!--contenttitle-->
+
+            <table cellpadding="0" cellspacing="0" border="0" class="stdtable">
+                <colgroup>
+                    <col class="con0" />
+                    <col class="con1" />
+                    <col class="con0" />
+                    <col class="con1" />
+                    <col class="con0" />
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th class="head0">请在此填入考核内容标题</th>
+                        <th class="head1" colspan="4">
+                            <input type="text" style="width: 100%;" id="add_theme"/></th>
+                        <!--<th class="head0">Platform(s)</th>
+                            <th class="head1">Engine version</th>
+                            <th class="head0">CSS grade</th>-->
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <th class="head0" colspan="5" style="text-align: center;">
+                            <input type="button" value="确定添加" style="width: 200px;" id="add_btn" onclick="add()"/></th>
+
+                    </tr>
+                </tfoot>
+                <tbody>
+                    <tr>
+                        <td>请输入第一项考核内容</td>
+                        <td colspan="2">
+                            <input type="text" style="width: 100%;" id="add_first"/></td>
+                        <td style="width: 150px; text-align: center;">请输入最大分值</td>
+                        <td class="center">
+                            <input type="text" style="text-align: center;" id="add_first_value"/></td>
+                    </tr>
+                    <tr>
+                        <td>请输入第一项考核内容</td>
+                        <td colspan="2">
+                            <input type="text" style="width: 100%;" id="add_second"/></td>
+                        <td style="width: 150px; text-align: center;">请输入最大分值</td>
+                        <td class="center">
+                            <input type="text" style="text-align: center;" id="add_second_value"/></td>
+                    </tr>
+                    <tr>
+                        <td>请输入第一项考核内容</td>
+                        <td colspan="2">
+                            <input type="text" style="width: 100%;" id="add_third"/></td>
+                        <td style="width: 150px; text-align: center;">请输入最大分值</td>
+                        <td class="center">
+                            <input type="text" style="text-align: center;" id="add_third_value" /></td>
+                    </tr>
+                    <tr>
+                        <td>请输入第一项考核内容</td>
+                        <td colspan="2">
+                            <input type="text" style="width: 100%;" id="add_forth"/></td>
+                        <td style="width: 150px; text-align: center;">请输入最大分值</td>
+                        <td class="center">
+                            <input type="text" style="text-align: center;" id="add_forth_value"/></td>
+                    </tr>
+                    <tr>
+                        <td>请输入第一项考核内容</td>
+                        <td colspan="2">
+                            <input type="text" style="width: 100%;" id="add_fifth"/></td>
+                        <td style="width: 150px; text-align: center;">请输入最大分值</td>
+                        <td class="center">
+                            <input type="text" style="text-align: center;" id="add_fifth_value"/></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <br />
+            <br />
+
+            <div class="contenttitle2">
+                <h3>修改考核项目</h3>
+            </div>
+            <!--contenttitle-->
+
+            <table cellpadding="0" cellspacing="0" border="0" class="stdtable stdtablequick">
+                <colgroup>
+                    <col class="con0" />
+                    <col class="con1" />
+                    <col class="con0" />
+                    <col class="con1" />
+                    <col class="con0" />
+                    <col class="con1" />
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th class="head0">请选择考核项目标题</th>
+                        <th class="head1" colspan="4">
+                            <select id="alter_select"></select></th>
+                        <th class="head0"><input type="button" value="确定" id="select_btn1" onclick="loadmodify()"/></th>
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <th class="head0" colspan="6" style="text-align:center;">
+                            <input type="button" value="确定修改" style="width: 200px;" id="modify_btn" onclick="modify()"/></th>
+
+                    </tr>
+                </tfoot>
+                <tbody>
+                    <tr>
+                        <td class="con0">项目标题</td>
+                        <td class="con1" colspan="5"><input type="text" style="width: 100%;" id="alter_theme"/></td>
+                        
+                    </tr>
+                    <tr>
+                        <td class="con0">考核项目一名称</td>
+                        <td class="con1" colspan="3">
+                            <input type="text" style="width: 100%;" id="alter_first"/></td>
+                        <td class="center" style="width: 150px;text-align:center;">最大分值</td>
+                        <td class="center">
+                            <input type="text" id="alter_first_value"/></td>
+                    </tr>
+                    <tr>
+                        <td class="con0">考核项目一名称</td>
+                        <td class="con1" colspan="3">
+                            <input type="text" style="width: 100%;" id="alter_second" /></td>
+                        <td class="center" style="width: 150px;text-align:center;">最大分值</td>
+                        <td class="center">
+                            <input type="text" id="alter_second_value"/></td>
+                    </tr>
+                    <tr>
+                       <td class="con0">考核项目一名称</td>
+                        <td class="con1" colspan="3">
+                            <input type="text" style="width: 100%;" id="alter_third"/></td>
+                        <td class="center" style="width: 150px;text-align:center;">最大分值</td>
+                        <td class="center">
+                            <input type="text" id="alter_third_value"/></td>
+                    </tr>
+                    <tr>
+                        <td class="con0">考核项目一名称</td>
+                        <td class="con1" colspan="3">
+                            <input type="text" style="width: 100%;" id="alter_forth"/></td>
+                        <td class="center" style="width: 150px;text-align:center;">最大分值</td>
+                        <td class="center">
+                            <input type="text" id="alter_forth_value"/></td>
+                    </tr>
+                    <tr>
+                        <td class="con0">考核项目一名称</td>
+                        <td class="con1" colspan="3">
+                            <input type="text" style="width: 100%;" id="alter_fifth"/></td>
+                        <td class="center" style="width: 150px;text-align:center;">最大分值</td>
+                        <td class="center">
+                            <input type="text" id="alter_fifth_value"/></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <br />
+            <br />
+
+            <div class="contenttitle2">
+                <h3>设置启动项目</h3>
+            </div>
+            <!--contenttitle-->
+            <table cellpadding="0" cellspacing="0" border="0" class="stdtable stdtablecb">
+                <colgroup>
+                    <col class="con0" />
+                    <col class="con1" />
+                    <col class="con0" />
+                    <col class="con1" />
+                    <col class="con0" />
+                    <col class="con1" />
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th class="head0" style="width: 150px;">请选择启动项目标题</th>
+                        <th class="head1" colspan="4"><select id="start_select"></select></th>
+                        <th class="head0"><input type="button" id="set_btn" onclick="loadsetstart()" value="确定"/></th>
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <th class="head0" colspan="6" style="text-align:center;">
+                            <input type="button" value="确定设为启动项" style="width: 200px;" id="start_btn" onclick="setStart()"/></th>
+                    </tr>
+                </tfoot>
+                <tbody>
+                    <tr>
+                        <th class="head0" style="text-align:center;">项目名称</th>
+                        <th class="head1" colspan="3" id="set_first"></th>
+                        <th class="head0" style="text-align:right; width: 130px;">最大分值</th>
+                        <th class="head1" id="set_first_value" ></th>
+                    </tr>
+                    <tr>
+                        <th class="head0" style="text-align:center;">项目名称</th>
+                        <th class="head1" colspan="3" id="set_second"></th>
+                        <th class="head0" style="text-align:right;width: 130px;">最大分值</th>
+                        <th class="head1" id="set_second_value"></th>
+                    </tr>
+                    <tr>
+                        <th class="head0" style="text-align:center;">项目名称</th>
+                        <th class="head1" colspan="3" id="set_third"></th>
+                        <th class="head0" style="text-align:right;width: 130px;">最大分值</th>
+                        <th class="head1" id="set_third_value"></th>
+                    </tr>
+                    <tr>
+                        <th class="head0" style="text-align:center;">项目名称</th>
+                        <th class="head1" colspan="3" id="set_forth"></th>
+                        <th class="head0" style="text-align:right;width: 130px;">最大分值</th>
+                        <th class="head1" id="set_forth_value"></th>
+                    </tr>
+                    <tr>
+                        <th class="head0" style="text-align:center;">项目名称</th>
+                        <th class="head1" colspan="3" id="set_fifth"></th>
+                        <th class="head0" style="text-align:right;width: 130px;">最大分值</th>
+                        <th class="head1" id="set_fifth_value"></th>
+                    </tr>
+                </tbody>
+            </table>
+
+            <br clear="all" />
+
+            <br />
+            <br />
+
+            
+            <!--contenttitle-->
+
+
+
+            <br />
+            <br />
+
+
+
+            <!--</div>-->
+            <!--contentwrapper-->
+
+        </div>
+        <!-- centercontent -->
+
+
+    </div>
+    <!--bodywrapper-->
+    <script type="text/javascript">
+        $(function () {
+            if (sessionStorage["identify"] == "普通管理员" || sessionStorage["identify"] == "高级管理员") {
+                loaditems();
+            }
+            else {
+                window.location.href = "../../IC2/Login/IC2_Login/login.html";
+            }
+        })
+    </script>
+</body>
+</html>

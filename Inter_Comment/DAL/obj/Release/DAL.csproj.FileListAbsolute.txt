@@ -1,0 +1,8 @@
+C:\Users\zuoxianwei\Documents\Visual Studio 2012\Projects\Inter_Comment\DAL\bin\Release\DAL.dll
+C:\Users\zuoxianwei\Documents\Visual Studio 2012\Projects\Inter_Comment\DAL\bin\Release\DAL.pdb
+C:\Users\zuoxianwei\Documents\Visual Studio 2012\Projects\Inter_Comment\DAL\bin\Release\Model.dll
+C:\Users\zuoxianwei\Documents\Visual Studio 2012\Projects\Inter_Comment\DAL\bin\Release\Model.pdb
+C:\Users\zuoxianwei\Documents\Visual Studio 2012\Projects\Inter_Comment\DAL\obj\Release\DAL.csprojResolveAssemblyReference.cache
+C:\Users\zuoxianwei\Documents\Visual Studio 2012\Projects\Inter_Comment\DAL\obj\Release\DAL.dll
+C:\Users\zuoxianwei\Documents\Visual Studio 2012\Projects\Inter_Comment\DAL\obj\Release\DAL.pdb
+C:\Users\zuoxianwei\Documents\Visual Studio 2012\Projects\Inter_Comment\DAL\bin\Release\Aspose.Cells.dll

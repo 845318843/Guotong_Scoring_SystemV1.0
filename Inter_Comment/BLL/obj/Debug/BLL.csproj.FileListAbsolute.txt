@@ -1,0 +1,10 @@
+C:\Users\zuoxianwei\Documents\Visual Studio 2012\Projects\Inter_Comment\BLL\bin\Debug\BLL.dll
+C:\Users\zuoxianwei\Documents\Visual Studio 2012\Projects\Inter_Comment\BLL\bin\Debug\BLL.pdb
+C:\Users\zuoxianwei\Documents\Visual Studio 2012\Projects\Inter_Comment\BLL\bin\Debug\DAL.dll
+C:\Users\zuoxianwei\Documents\Visual Studio 2012\Projects\Inter_Comment\BLL\bin\Debug\Model.dll
+C:\Users\zuoxianwei\Documents\Visual Studio 2012\Projects\Inter_Comment\BLL\bin\Debug\Aspose.Cells.dll
+C:\Users\zuoxianwei\Documents\Visual Studio 2012\Projects\Inter_Comment\BLL\bin\Debug\DAL.pdb
+C:\Users\zuoxianwei\Documents\Visual Studio 2012\Projects\Inter_Comment\BLL\bin\Debug\Model.pdb
+C:\Users\zuoxianwei\Documents\Visual Studio 2012\Projects\Inter_Comment\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+C:\Users\zuoxianwei\Documents\Visual Studio 2012\Projects\Inter_Comment\BLL\obj\Debug\BLL.dll
+C:\Users\zuoxianwei\Documents\Visual Studio 2012\Projects\Inter_Comment\BLL\obj\Debug\BLL.pdb

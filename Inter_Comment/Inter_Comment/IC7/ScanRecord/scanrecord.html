@@ -1,0 +1,144 @@
+<!DOCTYPE>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>浏览评分记录</title>
+   
+    <script src="scriptaculous/lib/prototype.js" type="text/javascript"></script>
+    <script src="scriptaculous/src/effects.js" type="text/javascript"></script>
+    <script src="JS/IndexJSP.js"></script>
+    <script src="JS/Load.js"></script>
+    <script type="text/javascript" src="validation.js"></script>
+    <script src="../../Scripts/jquery-1.7.1.js"></script>
+    
+    
+    
+
+    <script type="text/javascript">
+
+      
+
+function setActiveStyleSheet(title) {
+var i, a, main;
+for(i=0; (a = document.getElementsByTagName("link")[i]); i++) {
+if(a.getAttribute("rel").indexOf("style") != -1 && a.getAttribute("title")) {
+a.disabled = true;
+if(a.getAttribute("title") == title) a.disabled = false;
+}
+}
+}
+
+
+</script>
+<link title="style1" rel="stylesheet" href="style.css" type="text/css" />
+<link title="style2" rel="alternate stylesheet" href="style2.css" type="text/css" />
+<link title="style3" rel="alternate stylesheet" href="style3.css" type="text/css" />
+    <style>
+        td {
+        text-align:center;
+        border: 2px solid #808080;
+        padding: 0px;
+        overflow:hidden;
+        height: 35px;
+        }
+        th {
+        color:#0094ff;
+        border: 2px solid #808080;
+        }
+    </style>
+</head>
+<body>
+    <script type="text/javascript">
+        
+    </script>
+    <div class="style_changer">
+    	<div class="style_changer_text">主题：</div>
+        <input type="submit" value="1" onclick="setActiveStyleSheet('style1');" />
+        <input type="submit" value="2" onclick="setActiveStyleSheet('style2');" />
+        <input type="submit" value="3" onclick="setActiveStyleSheet('style3');" />
+    </div>
+
+    <div id="titles" style="margin:50px 100px;height:50px; text-align:center;line-height:50px;">
+        <label style="color:blue;font-size:30px;text-align:center;">浏览评分记录</label>
+       
+    </div>
+	<div class="form_content">
+        <form id="test" action="#" style="width: 900px;">
+            <table id="table_test">
+                <tr>
+                    <td colspan="2">请选要浏览的项目组</td>
+                    <td colspan="2"><select id="items"></select></td>
+                    <td colspan="2">请输入评分人</td>
+                    <td><input type="text" id="actors"/></td>
+                    <td><input type="button" value="确定" id="actor_btn" onclick="sure()"/></td>                
+                </tr>
+                <!--<tr>
+                    <th style="width:160px;text-align:center">评分人</th>
+                    <th style="width:160px;text-align:center">被评分人</th>
+                    <th style="width:160px;text-align:center">金钱关</th>
+                    <th style="width:160px;text-align:center">规则关</th>
+                    <th style="width:160px;text-align:center">位置关</th>
+                    <th style="width:160px;text-align:center">能力关</th>
+                    <th style="width:160px;text-align:center">规则关</th>
+                    <th style="width:160px;text-align:center">评分时间</th>
+                    
+                </tr>
+                <tr>
+                    <td>张三</td>
+                    <td>李四</td>
+                    <td>20</td>
+                    <td>20</td>
+                    <td>20</td>
+                    <td>20</td>
+                    <td>20</td>
+                    <td>201438793889</td> 
+                    
+                </tr>
+                <tr>
+                    <td>李四</td>
+                    <td><input type="text" style="height:100%;width:100%; text-align:center; font-size: 17px;" value="20"/></td>
+                    <td><input type="text" style="height:100%;width:100%; text-align:center; font-size: 17px;" value="20"/></td>
+                    <td><input type="text" style="height:100%;width:100%; text-align:center; font-size: 17px;" value="20"/></td>
+                    <td><input type="text" style="height:100%;width:100%; text-align:center; font-size: 17px;" value="20"/></td>
+                    <td><input type="text" style="height:100%;width:100%; text-align:center; font-size: 17px;" value="20"/></td>
+                </tr>-->
+              
+                
+                
+            </table>
+        </form>
+        <div style="text-align:center;margin-bottom:50px; margin-left: 10px; height:30px; line-height:30px;"></div>
+    </div>
+    
+    <script type="text/javascript">
+        //$(function () {
+        //    $("#table_test").css("display","none");
+
+        //    if (sessionStorage["islogin"] == "true") {
+        //        $("#table_test").css("display","block");
+        //    }
+        //})
+        $(function () {
+            //alert("开始加载");
+            loadlist();
+        })
+
+
+        function formCallback(result, form) {
+            window.status = "valiation callback for form '" + form.id + "': result = " + result;
+        }
+        
+        var valid = new Validation('test', {immediate : true, onFormValidate : formCallback});
+        Validation.addAllThese([
+            ['validate-password', '> 6 characters', {
+                minLength : 7,
+                notOneOf : ['password','PASSWORD','1234567','0123456'],
+                notEqualToField : 'field1'
+            }],
+            ['validate-password-confirm', 'please try again.', {
+                equalToField : 'field8'
+            }]
+        ]);
+    </script>
+
+</body>
+</html>

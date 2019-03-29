@@ -1,0 +1,5 @@
+C:\Users\zuoxianwei\Documents\Visual Studio 2012\Projects\Inter_Comment\Model\bin\Debug\Model.dll
+C:\Users\zuoxianwei\Documents\Visual Studio 2012\Projects\Inter_Comment\Model\bin\Debug\Model.pdb
+C:\Users\zuoxianwei\Documents\Visual Studio 2012\Projects\Inter_Comment\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
+C:\Users\zuoxianwei\Documents\Visual Studio 2012\Projects\Inter_Comment\Model\obj\Debug\Model.dll
+C:\Users\zuoxianwei\Documents\Visual Studio 2012\Projects\Inter_Comment\Model\obj\Debug\Model.pdb

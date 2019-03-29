@@ -1,0 +1,36 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<title>登录界面</title>
+<!-- Custom Theme files -->
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="renderer" content="webkit|ie-comp|ie-stand"/> 
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
+    <script src="js/Login.js"></script>
+    <script src="../../../Scripts/jquery-1.7.1.js"></script>
+
+</head>
+<body>
+<div class="login">
+	<h2>用户登录</h2>
+	<div class="login-top">
+		<h1>请输入登录信息</h1>
+		<form>
+			<input id="username" type="text" value="请输入用户名" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '请输入用户名';}">
+			<input id="pwd" type="password" value="password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'password';}">
+	    </form>
+	    <div class="forgot">
+	    	<!--<a href="#">forgot Password</a>-->
+            <input id="admin_btn" type="button" value="管理员登录" onclick="adminlogin()" >
+	    	<input id="user_btn" type="button" value="普通用户登录" onclick="userlogin()" >
+	    </div>
+	</div>
+	
+</div>	
+<div class="copyright">
+	<p>Copyright &copy; 2017.南阳理工学院 九州通工作室</p>
+</div>
+
+
+</body>
+</html>

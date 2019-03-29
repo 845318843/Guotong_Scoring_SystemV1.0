@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>添加用户界面</title>
+    <meta charset="utf-8">
+     <meta name="renderer" content="webkit|ie-comp|ie-stand"/> 
+    <link href="css/style.css" rel='stylesheet' type='text/css' />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="../../../Scripts/jquery-1.7.1.js"></script>
+    <script src="AddUserOrAdmin.js"></script>
+    <script type="application/x-javascript"> 
+        addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); 
+        function hideURLbar(){ window.scrollTo(0,1); } 
+    </script>
+    
+</head>
+
+<body>
+    <div class="main">
+        <!-----start-main---->
+        <div class="inset">
+        </div>
+        <h1 style="color: #0094ff">添加用户</h1>
+        <form>
+            <select id="types">
+                <option value="普通用户">添加用户</option>
+            </select>
+            
+            <div class="lable">
+                <input type="text" class="text" value="姓名" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '姓名';}" id="active">
+                <input type="text" id="pwd" class="text" value="密码" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '密码';}">
+            </div>
+            <div class="clear"></div>
+            <div class="lable-2">
+            </div>
+            <div class="clear"></div>
+
+            <div class="submit">
+                <input type="button" onclick="add()" value="确定添加">
+                <input type="button" value="管理参评人员" style="background-color:#0094ff" onclick="jumptoset()"/>
+                <input type="button" value="修改密码" style="background-color:#00ff90" onclick="jumptoalter()"/>
+                <input type="button" value="删除员工&管理员" style="background-color:#07bd21" onclick="jumptodelete()"/>
+            </div>
+            <div class="clear"></div>
+        </form>
+        <!-----//end-main---->
+    </div>
+    <!-----start-copyright---->
+    <div class="copy-right">
+        <p>Copyright &copy; 2017.南阳理工学院 九州通工作室</p>
+    </div>
+    <!-----//end-copyright---->
+    <script type="text/javascript">
+        $(function () {
+            //alert(sessionStorage["role"]);
+            
+                if (sessionStorage["role"] == "高级管理员") {
+                    var selects = document.getElementById('types');
+                    selects.innerHTML += "<option value=\"高级管理员\">添加高级管理员</option>";
+                }       
+            else {
+                window.location.href = "../../../IC2/Login/IC2_Login/login.html";
+            }
+        })
+    </script>
+</body>
+</html>
